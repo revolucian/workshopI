@@ -5,7 +5,7 @@
 }
 
 body{
-    margin: 15px;
+    margin: 50px;
     color: #333;
 }
 
@@ -15,23 +15,12 @@ body header h1 {
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
-    margin: 45px;
-    
-}
-
-main div{
-    width: 50%;
-    flex-direction: column;
-    justify-content: center;
-}
-
-main div form{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 15px;
-    justify-content: center;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 50px auto;
+    grid-template-areas: "lista ingreso-datos"
+                         "alumnos form";
 }
 
 main div h2 {
@@ -39,53 +28,110 @@ main div h2 {
     font-size: 30px;
 }
 
-main div input, button {
+.lista{
+    grid-area: lista;
+}
+
+.ingreso-datos {
+    grid-area: ingreso-datos;
+}
+
+.list-group-item {
+    grid-area: alumnos;
+}
+
+main div form{
+    grid-area: form;
+    display: grid;
+    gap: 8px; 
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(5, 40px) auto;
+    grid-template-areas: "input-nombre input-apellido"
+                         "input-dni input-email"
+                         "add-button add-button"
+                         "input-dni-remove remove-button"
+                         "input-dni-search search-button"
+                         "students-search-list students-search-list";
+}
+
+main div form input, button {
     margin: 5px;
     border-radius: 8px;
     font-size: 20px;
 }
 
-main div input{
+main div form input{
     border:0.05em solid rgb(167, 164, 164);
+    width: 349px !important;
+    height: 2em;
     padding: 10px 32px;
     text-align: left;
-    width: 100px;
+}
+
+#input-name {
+    grid-area: input-nombre;
+}
+
+#input-surname {
+    grid-area: input-apellido;
+}
+
+#input-dni {
+    grid-area: input-dni;
+}
+
+#input-email {
+    grid-area: input-email;
+}
+
+#input-dni-remove {
+    grid-area: input-dni-remove;
+}
+
+#input-dni-search {
+    grid-area: input-dni-search;
 }
 
 main div button{
     border: none;
     color:white;
-    padding: 10px 32px;
+    padding: 5px 32px;
+    height: 2em;
     text-align: center;
+    font-size: 20px;
     text-decoration: none;
     transition: all 0.2s;
 }
 
-main div .agregar{
+#add-button{
+    grid-area: add-button;
     background-color:#516BF0;
-    width: 585px;
 }
 
-main div .eliminar {
+#remove-button{
+    grid-area: remove-button;
     background-color:#FD5E60;
-    justify-content: center;
-    width: 285px;
 }
+
+#search-button{
+    grid-area: search-button;
+    background-color: green;
+}
+
+#students-search-list{
+    grid-area: students-search-list;
+}
+
 
 .valid-add-button:hover{
     background-color:rgb(45, 70, 196);
 }
 
-.eliminar:hover{
+#remove-button:hover{
     background-color:rgb(224, 44, 47);
 }
 
-main div .buscar{
-    background-color: green;
-    justify-content: center;
-    width: 285px;
+#search-button:hover{
+    background-color: darkgreen;
 }
 
-main div input {
-    width: 285px !important;
-}

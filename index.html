@@ -20,12 +20,12 @@
     
     <main>
     <div>
-        <h2>Lista de alumnos</h2>
+        <h2 class="lista">Lista de alumnos</h2>
         <div id="students-list"></div>
     </div>
 
     <div>
-        <h2>Ingreso de datos</h2>
+        <h2 class="ingreso-datos">Ingreso de datos</h2>
         <form action="">
             <input type="text" id="input-name" class="form-control" name="Nombre" placeholder="Nombre">
             <input type="text" id="input-surname" class="form-control" name="Apellido" placeholder="Apellido">
@@ -38,9 +38,9 @@
 
             <input type="text" id="input-dni-search" class="form-control" name="DNI" placeholder="DNI" class="dni-dos">
             <button type="button" id="search-button" class="buscar"> Buscar alumno</button>
+            <div id="students-search-list"></div>
         </form>
     </div>
-    <div id="students-search-list"></div>
     </main>
 
     <!-- Optional JavaScript -->
