@@ -49,7 +49,7 @@ main div input{
     border:0.05em solid rgb(167, 164, 164);
     padding: 10px 32px;
     text-align: left;
-    width: 220px;
+    width: 100px;
 }
 
 main div button{
@@ -72,11 +72,20 @@ main div .eliminar {
     width: 285px;
 }
 
-
-.agregar:hover{
+.valid-add-button:hover{
     background-color:rgb(45, 70, 196);
 }
 
 .eliminar:hover{
     background-color:rgb(224, 44, 47);
+}
+
+main div .buscar{
+    background-color: green;
+    justify-content: center;
+    width: 285px;
+}
+
+main div input {
+    width: 285px !important;
 }
