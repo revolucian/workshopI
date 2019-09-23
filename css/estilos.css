@@ -55,14 +55,13 @@ main div form{
 }
 
 main div form input, button {
-    margin: 5px;
     border-radius: 8px;
     font-size: 20px;
 }
 
 main div form input{
     border:0.05em solid rgb(167, 164, 164);
-    width: 349px !important;
+    width: 359px !important;
     height: 2em;
     padding: 10px 32px;
     text-align: left;
