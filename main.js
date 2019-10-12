@@ -138,7 +138,7 @@ function addStudent(){
     return null;
 }
 
-function createStudentNode(newStudent) {
+function createStudentNode(newStudent, /*elementToAppend*/) {
     var studentsListDiv = document.getElementById('students-list');
 
     var studentItem = document.createElement("div");
@@ -179,10 +179,12 @@ function deleteStudent(){
   var searchButton = document.getElementById('search-button');
   searchButton.onclick = searchStudent;
 
-  function searchStudent (){
+  function searchStudent(){
+      //cleanHTML
       var inputDniToSearch = document.getElementById('input-dni-search');
       var valueToSearch = inputDniToSearch.value;
       var studentPosition = findStudentByDni(valueToSearch);
+      //findStudentByName
 
       if(studentPosition){
         var studentsListDiv = document.getElementById('students-search-list');
